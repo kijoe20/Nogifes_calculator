@@ -14,7 +14,15 @@ def main():
     """Main app logic"""
 
     # Streamlit app layout
-    st.write("### LP Recovery Calculator")
+    st.set_page_config(
+    page_title="LP Calculator | Nogifes",
+    page_icon="👋",)
+    with st.sidebar:
+        st.markdown("Feel free to check out my project on GitHub and share your thoughts or any tips you may have for a budding developer like me!")
+
+    st.caption("Easily calculate your LP recovery time and optimize your gameplay!")
+    st.title("LP Recovery Calculator for Nogizaka46 Rhythm Festival")
+    st.write("Welcome to the LP Recovery Calculator, your ultimate tool for mastering the Nogizaka46 Rhythm Festival! \n\nIn this web app, you can effortlessly calculate how long it will take to recover your Life Points (LP) based on your current and maximum LP values. With additional features planned for the future, including total LP recovery calculations over specified periods, you'll have everything you need at your fingertips to enhance your gaming experience. Dive in and make the most of your gameplay today!")
 
     max_lp = st.number_input("Maximum LP", min_value=0, value=80, help="Enter the maximum LP achievable.")
     current_lp = st.number_input("Current LP", min_value=0, value=0, help="Enter your current LP.")
